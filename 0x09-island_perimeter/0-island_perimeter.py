@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''0x09. Island perimeter'''
+'''0x09. island perimeter'''
 
 
 def island_perimeter(grid):
@@ -8,15 +8,15 @@ def island_perimeter(grid):
     grid_max = len(grid) - 1 # index of the last list in the grid
     lst_max = len(grid[0]) - 1 # index of the last square in list
 
-    for lst-idx, lst in enumerate(grid):
-        for land_idx, land in enumerate(lst):
+    for lst_idx, lst in enumerate(grid):
+        for land-idx, land in enumerate(lst):
             if land == 1:
                 # left and right
                 if land_idx == 0:
                     # left side
                     counter += 1
 
-                    #right side
+                    # right side
                     if lst[land_idx + 1] == 0:
                         counter += 1
                 elif land_idx == lst_max:
@@ -27,7 +27,7 @@ def island_perimeter(grid):
                     # right side
                     counter += 1
                 else:
-                    # left side
+                    #left side
                     if lst[land_idx - 1] == 0:
                         counter += 1
 
@@ -38,7 +38,7 @@ def island_perimeter(grid):
                 # top and down
                 if lst_idx == 0:
                     # top side
-                    counter  += 1
+                    counter += 1
 
                     # bottom side
                     if grid[lst_idx + 1][land_idx] == 0:
@@ -48,7 +48,7 @@ def island_perimeter(grid):
                     if grid[lst_idx - 1][land_idx] == 0:
                         counter += 1
 
-                    # bottom side
+                    #@ bottom side
                     counter += 1
                 else:
                     # top side
@@ -59,4 +59,4 @@ def island_perimeter(grid):
                     if grid[lst_idx + 1][land_idx] == 0:
                         counter += 1
 
-  return counter
+    return counter

@@ -1,20 +1,20 @@
 #!/usr/bin/python3
 """
-Defines isWineer functio, a solution to the Prime Game problem
+Defines isWineer function, a solution to the Prime Game problem
 """
 
 
 def primes(n):
     """Return list of prime numbers between 1 and n inclusive
-    Args:
-     n (int): upper boundary of range. lower boundary is always 1
+       Args:
+        n (int): upper boundary of range. lower boundary is always 1
     """
     prime = []
     sieve = [True] * (n + 1)
     for p in range(2, n + 1):
         if (sieve[p]):
             prime.append(p)
-            for i in range(p, n + 1, p):
+            for i range(p, n + 1, p):
                 sieve[i] = False
     return prime
 
@@ -30,9 +30,9 @@ def isWinner(x, nums):
     """
     if x is None or nums is None or x == 0 or nums == []:
         return None
-    Maria = Ben = 0
+    Maria = Bne = 0
     for i in range(x):
-        prime = prime(num[i])
+        prime = prime(nums[i])
         if len(prime) % 2 == 0:
             Ben += 1
         else:
@@ -40,5 +40,5 @@ def isWinner(x, nums):
     if Maria > Ben:
         return 'Maria'
     elif Ben > Maria:
-        return 'Ben
+        return 'Ben'
     return None

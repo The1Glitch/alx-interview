@@ -4,7 +4,7 @@ Defines isWineer functio, a solution to the Prime Game problem
 """
 
 
-def isWinner(x, nums):
+def primes(n):
     """Return list of prime numbers between 1 and n inclusive
     Args:
      n (int): upper boundary of range. lower boundary is always 1

@@ -32,7 +32,7 @@ def isWinner(x, nums):
         return None
     Maria = Ben = 0
     for i in range(x):
-        prime = prime(nums[i])
+        prime = primes(nums[i])
         if len(prime) % 2 == 0:
             Ben += 1
         else:

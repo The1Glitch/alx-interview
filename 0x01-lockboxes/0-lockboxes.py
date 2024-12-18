@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-'''LockBoxes Challenge'''
+'''LockedBoxes Challenge'''
 
 
-def canUnlocAll(boxes):
-    '''determines if all the boxes can be opned or not
+def canUnlockAll(boxes):
+    '''determines if all the boxes can be opened or not
     Returns:
-        True: all boxes can be opened
-        false: not all boxes can be opened
+        True: All boxes can be opened
+        False: Not all boxes can be opened
     '''
     length = len(boxes)
     keys = set()
@@ -21,12 +21,12 @@ def canUnlocAll(boxes):
             if key != 0 and key < length and key not in opened_boxes:
                 i = key
                 break
-            if oldi != i:
-                continue
-            else:
-                break
+        if oldi != i:
+            continue
+        else:
+            break
 
-            for i in range(length):
-                if i not in opened_boxes and i != 0:
-                    return False
-                return True
+    for i in range(lenth):
+        if i not in opened_boxes and i != 0:
+            return False
+    return True
